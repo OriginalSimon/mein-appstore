@@ -1,6 +1,6 @@
 { "$schema": "../schema.json",
   "name": "Immich Power Tools",
-  "id": "immich_power_tools",
+  "id": "immich-power-tools",
   "available": true,
   "short_desc": "Power tools for organizing your immich library.",
   "author": "varun-raj",
