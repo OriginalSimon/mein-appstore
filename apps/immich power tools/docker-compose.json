@@ -1,0 +1,32 @@
+{ "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "immich_power_tools",
+      "image": "ghcr.io/varun-raj/immich-power-tools:0.15.0",
+      "isMain": true,
+      "internalPort": "3000",
+      "environment": {
+        "IMMICH_URL": "${IMMICH_URL}",
+        "IMMICH_API_KEY": "${IMMICH_API_KEY}",
+        "GOOGLE_MAPS_API_KEY": "${GOOGLE_MAPS_API_KEY}",
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "DB_USERNAME": "${DB_USERNAME}",
+        "DB_PASSWORD": "${DB_PASSWORD}",
+        "DB_HOST": "${DB_HOST}",
+        "DB_PORT": "${DB_PORT}",
+        "DB_DATABASE_NAME": "${DB_DATABASE_NAME}",
+        "SECURE_COOKIE": "${SECURE_COOKIE}",
+        "IMMICH_SHARE_LINK_KEY": "${IMMICH_SHARE_LINK_KEY}",
+        "POWER_TOOLS_ENDPOINT_URL": "${POWER_TOOLS_ENDPOINT_URL}",
+        "JWT_SECRET": "${JWT_SECRET}"
+      }, 
+      "healthCheck": {
+        "test": "CMD wget --no-verbose --tries=1 --spider http://localhost:3000/api/health",
+        "interval": "30s",
+        "timeout": "10s",
+        "retries": 3,
+        "start_period": "40s"
+      }
+    }
+  ]
+}

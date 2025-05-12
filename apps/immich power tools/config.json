@@ -1,0 +1,103 @@
+{ "$schema": "../schema.json",
+  "name": "Immich Power Tools",
+  "id": "immich_power_tools",
+  "available": true,
+  "short_desc": "Power tools for organizing your immich library.",
+  "author": "varun-raj",
+  "port": 8389,
+  "categories": [
+    "utilities"
+  ],
+  "description": " Power tools for organizing your immich library.",
+  "tipi_version": 1,
+  "version": "v0.15.0",
+  "source": "https://github.com/varun-raj/immich-power-tools",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "dynamic_config": true,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Immich Server URL",
+      "required": true,
+      "env_variable": "IMMICH_URL"
+    },
+    {
+      "type": "password",
+      "label": "Immich API Key",
+      "required": true,
+      "env_variable": "IMMICH_API_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Google Maps API Key for heatmap",
+      "required": false,
+      "env_variable": "GOOGLE_MAPS_API_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Gemini API Key for parsing search query in 'Find'",
+      "required": false,
+      "env_variable": "GEMINI_API_KEY"
+    },
+    {
+      "type": "text",
+      "label": "Postgres Database Username",
+      "required": false,
+      "env_variable": "DB_USERNAME"
+    },
+    {
+      "type": "password",
+      "label": "Postgres Database Password",
+      "required": false,
+      "env_variable": "DB_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Postgres Host",
+      "required": false,
+      "env_variable": "DB_HOST"
+    },
+    {
+      "type": "text",
+      "label": "Postgres Port (Default: 5432)",
+      "required": false,
+      "env_variable": "DB_PORT"
+    },
+    {
+      "type": "text",
+      "label": "Postgres Database Name",
+      "required": false,
+      "env_variable": "DB_DATABASE_NAME"
+    },
+    {
+      "type": "checkbox",
+      "label": "Enable Secure Cookies",
+      "required": false,
+      "env_variable": "SECURE_COOKIE"
+    },
+    {
+      "type": "text",
+      "label": "Immich Share Link Key",
+      "required": false,
+      "env_variable": "IMMICH_SHARE_LINK_KEY"
+    },
+    {
+    "type": "text",
+    "label": "Power Tools Endpoint URL",
+    "required": false,
+    "env_variable": "POWER_TOOLS_ENDPOINT_URL"
+    },
+    {
+    "type": "boolean",
+    "label": "JWT Secret for authentication",
+    "required": false,
+    "env_variable": "JWT_SECRET"
+    }
+  ],
+  "created_at": 1747042958784,
+  "updated_at": 1747044059872
+}
