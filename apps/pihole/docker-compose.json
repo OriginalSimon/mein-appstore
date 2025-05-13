@@ -2,7 +2,7 @@
   "$schema": "../dynamic-compose-schema.json",
   "services": [
     {
-      "name": "pihole",
+      "name": "pihole-dns",
       "image": "pihole/pihole:2025.04.0",
       "isMain": true,
       "internalPort": 80,

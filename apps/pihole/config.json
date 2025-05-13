@@ -4,7 +4,7 @@
   "available": true,
   "exposable": true,
   "dynamic_config": true,
-  "port": 8104,
+  "port": 8105,
   "id": "pihole",
   "tipi_version": 1,
   "version": "2025.04.0",
