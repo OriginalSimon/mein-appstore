@@ -8,7 +8,7 @@
       "internalPort": 80,
       "addPorts": [
         {
-          "hostPort": 53,
+          "hostPort": 5353,
           "containerPort": 53,
           "interface": "${NETWORK_INTERFACE:-0.0.0.0}",
           "tcp": true,
